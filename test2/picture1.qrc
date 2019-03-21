@@ -1,0 +1,10 @@
+<RCC>
+    <qresource prefix="/n">
+        <file>image1/skin-blue.jpg</file>
+        <file>image1/skin-chrome.jpg</file>
+        <file>image1/skin-kiwi.jpg</file>
+        <file>image1/skin-ocean.jpg</file>
+        <file>image1/beijng/backeground1.jpg</file>
+        <file>image1/ocean.jpg</file>
+    </qresource>
+</RCC>
