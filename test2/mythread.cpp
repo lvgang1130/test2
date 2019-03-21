@@ -1,4 +1,4 @@
-#include "mythread.h"
+﻿#include "mythread.h"
 #include <QSqlDatabase>
 #include <QDebug>
 #include <QSqlQuery>
@@ -22,7 +22,7 @@ void MyThread::clink(){
    // 在线程中自定义函数实现UDP
     QTimer *mytime;
     qDebug()<<"进入线程1";
-    this->udptransmit(QString("192.168.1.100"),4997,udpsocket,mytime,this);
+    this->udptransmit(QString("192.168.2.100"),4997,udpsocket,mytime,this);
 }
 
 //创建UDP连接
