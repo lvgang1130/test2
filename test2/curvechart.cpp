@@ -19,7 +19,7 @@ CurveChart::CurveChart(QWidget *parent) : QWidget(parent)
     showPoint = true;
     showPointBg = true;
 
-    bgColorStart = QColor(79, 79, 79);
+    bgColorStart = QColor(79, 79, 79,100);
     bgColorEnd = QColor(51, 51, 51);
     textColor = QColor(250, 250, 250);
     pointColor = QColor(38, 114, 179);

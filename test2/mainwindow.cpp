@@ -5,7 +5,7 @@
 #include <QSqlError>
 #include <QPushButton>
 #include <QSqlQuery>
-
+#include "commonhelper.h"
 
 
 MainWindow::MainWindow(QWidget *parent) :
@@ -14,6 +14,7 @@ MainWindow::MainWindow(QWidget *parent) :
 {
     ui->setupUi(this);
 
+    //setWindowFlags(Qt::FramelessWindowHint | windowFlags());
     //初始化参数
     day_bool=true;
     night_bool=false;
@@ -250,34 +251,38 @@ void MainWindow::initwindows(){
     //开始界面
     on_putton_set_clicked();
 
+    // 加载QSS样式
+        CommonHelper::setStyle(":/image1/white.qss");
+
+
     //将界面设置为背景可填充
     //ui->widget_choose->setAutoFillBackground(true);
 
-    //将图片加载到QPalette
-    QPalette palette1 ;
-    palette1.setBrush(QPalette::Window,
-               QBrush(QPixmap(":/n/image1/beijng/backeground1.jpg").scaled(// 缩放背景图.
-                   ui->page5->size(),
-                   Qt::IgnoreAspectRatio,
-                   Qt::SmoothTransformation)));
-    QPalette palette2;
-    palette2.setBrush(QPalette::Window,
-               QBrush(QPixmap(":/n/image1/beijng/backeground1.jpg").scaled(// 缩放背景图.
-                   ui->page5->size(),
-                   Qt::IgnoreAspectRatio,
-                   Qt::SmoothTransformation)));
+//    //将图片加载到QPalette
+//    QPalette palette1 ;
+//    palette1.setBrush(QPalette::Window,
+//               QBrush(QPixmap(":/n/image1/beijng/backeground1.jpg").scaled(// 缩放背景图.
+//                   ui->page5->size(),
+//                   Qt::IgnoreAspectRatio,
+//                   Qt::SmoothTransformation)));
+//    QPalette palette2;
+//    palette2.setBrush(QPalette::Window,
+//               QBrush(QPixmap(":/n/image1/beijng/backeground1.jpg").scaled(// 缩放背景图.
+//                   ui->page5->size(),
+//                   Qt::IgnoreAspectRatio,
+//                   Qt::SmoothTransformation)));
 
-    this->setPalette(palette1);
-    ui->widget_choose->setPalette(palette2);
+//    this->setPalette(palette1);
+//    ui->widget_choose->setPalette(palette2);
 
-    //按钮风格设置
-    ui->widget_choose->setStyleSheet("QPushButton{background-color: rgb(80, 250, 255);}"
-                                  "QPushButton:hover{background-color: rgb(160, 250, 255);}"
-                                  "QPushButton:pressed{background-color: rgb(120, 250, 255);}");
+//    //按钮风格设置
+//    ui->widget_choose->setStyleSheet("QPushButton{background-color: rgb(80, 250, 255);}"
+//                                  "QPushButton:hover{background-color: rgb(160, 250, 255);}"
+//                                  "QPushButton:pressed{background-color: rgb(120, 250, 255);}");
 
-    ui->page5->setStyleSheet("QPushButton{background-color: rgb(220, 250, 255);}"
-                             "QPushButton:hover{background-color: rgb(192, 192, 192);}"
-                             "QPushButton:pressed{background-color: rgb(255, 255, 255);}");
+//    ui->page5->setStyleSheet("QPushButton{background-color: rgb(220, 250, 255);}"
+//                             "QPushButton:hover{background-color: rgb(192, 192, 192);}"
+//                             "QPushButton:pressed{background-color: rgb(255, 255, 255);}");
 }
 void MainWindow::on_button_connect1_clicked()
 {

@@ -41,7 +41,8 @@ HEADERS += \
     mythread2.h \
     thread_readsql.h \
     curvechart.h \
-    stable.h
+    stable.h \
+    commonhelper.h
 
 FORMS += \
         mainwindow.ui
@@ -54,4 +55,4 @@ else: unix:!android: target.path = /opt/$${TARGET}/bin
 !isEmpty(target.path): INSTALLS += target
 
 RESOURCES += \
-    picture1.qrc
+    p1.qrc
